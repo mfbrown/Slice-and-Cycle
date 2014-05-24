@@ -1,0 +1,204 @@
+
+
+/* TYPOGRAPHY ------------------------*/
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: "Helvetica", "Ariel", "Sans-serif";
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+.hero h1 {
+	color: white;
+	font-size: 2.5em;
+	margin: 0;
+	width: 100%;
+	text-align: center;
+	background-color: rgba(0,0,0,0.7);
+}
+
+
+/* GLOBAL FORMATTING */
+
+img {
+	width: 100%;
+}
+
+.body-wrapper {
+	padding-top: 4.6875em;
+}
+
+.rwd-break {
+	display: none;
+}
+
+/* HEADER ---------------- */
+
+header {
+	width: 100%;
+	position: fixed;
+	background-color: lightgrey;
+	text-align: center;
+	z-index: 500;
+}
+
+header .logo {
+	width: 50%;
+	text-align: left;
+	display: inline-block;
+	margin-right: -5px;
+	padding-left: 0.5em;
+}
+
+header i {
+	width: 50%;
+	font-size: 2em;
+	text-align: right;
+	padding-right: 0.5em;
+}
+
+header ul {
+	list-style-type: none;
+	padding: 0;
+	line-height: 2.625em;
+}
+
+header ul li {
+	border: 1px solid black;
+	margin-bottom: 0.5em;
+}
+
+header ul li:last-child {
+	margin-bottom: 0;
+}
+
+header ul li a {
+	padding: 42px 0;
+}
+
+.top-bar-right {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+/* Hero Styles */
+
+.hero {
+	position: relative;
+}
+
+.hero h1 {
+	position: absolute;
+	bottom: 0;
+}
+
+
+
+/*Medium screens and up. Min Width 641px */
+@media only screen and (min-width: 40.063em) { 
+
+	
+	/* Font Changes */
+	.hero h1 {
+		font-size: 5em;
+		background-color: rgba(0,0,0,0);
+		text-align: left;
+		padding-left: 15px;
+		bottom: 20%;
+	}
+
+	/* Global Changes */
+
+	.rwd-break {
+		display: inline-block;
+		margin-top: 0;
+	}
+
+	/* Header Formatting */
+
+	header .logo {
+		float: left;
+		width: auto;
+	}
+
+	header ul {
+		display: inline-block;
+		float: right;
+		margin: 0 1px 0 0;
+		line-height: 4.6875em;
+	}
+
+	header ul li {
+		display: inline-block;
+		margin: 0 -5px 0 0;
+		padding: 0 30px;
+		border: 0;
+		border-left: 1px solid black;
+	}
+
+	header ul li:last-child {
+		border-right: 1px solid	black;
+	}
+
+	.top-bar-right {
+		position: static;
+	}
+
+	.hide-medium-up {
+		position: absolute !important;
+		top: -9999px;
+		left: -9999px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CLEARFIX HACK --------------------- */
+.group:before,
+.group:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.group:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.group {
+    *zoom: 1;
+}
+
+/* BOX SIZING ------------------------*/
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
